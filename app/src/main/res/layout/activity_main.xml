@@ -7,92 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btSeisPontos2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+6"
-        app:layout_constraintEnd_toStartOf="@+id/btNovePontos"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btTresPontos"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
-
-    <Button
-        android:id="@+id/btDozePontos2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btNovePontos"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
-
-    <Button
-        android:id="@+id/btNovePontos2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+9"
-        app:layout_constraintEnd_toStartOf="@+id/btDozePontos"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btSeisPontos"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
-
-    <Button
-        android:id="@+id/btUmPonto2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+1"
-        app:layout_constraintEnd_toStartOf="@+id/btTresPontos"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
-
-    <Button
-        android:id="@+id/btTresPontos2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+3"
-        app:layout_constraintEnd_toStartOf="@+id/btSeisPontos"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/btUmPonto"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
-
     <ImageView
         android:id="@+id/ic_jogadorUm"
         android:layout_width="51dp"
@@ -105,16 +19,6 @@
         app:srcCompat="@drawable/ic_jogadorum" />
 
     <TextView
-        android:id="@+id/tvPontosJogador1"
-        android:layout_width="32dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="4dp"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        tools:layout_editor_absoluteY="20dp" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="137dp"
         android:layout_height="40dp"
@@ -125,17 +29,27 @@
         app:layout_constraintStart_toEndOf="@+id/ic_jogadorUm"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvPontosJogador1"
+        android:layout_width="32dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
     <Button
         android:id="@+id/btUmPonto"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
+        android:maxLines="1"
         android:minWidth="0dp"
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
-        android:maxLines="1"
         android:text="+1"
         app:layout_constraintEnd_toStartOf="@+id/btTresPontos"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -147,12 +61,12 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
+        android:maxLines="1"
         android:minWidth="0dp"
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
-        android:maxLines="1"
         android:text="+3"
         app:layout_constraintEnd_toStartOf="@+id/btSeisPontos"
         app:layout_constraintStart_toEndOf="@+id/btUmPonto"
@@ -163,12 +77,12 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
+        android:maxLines="1"
         android:minWidth="0dp"
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
-        android:maxLines="1"
         android:text="+6"
         app:layout_constraintEnd_toStartOf="@+id/btNovePontos"
         app:layout_constraintStart_toEndOf="@+id/btTresPontos"
@@ -179,12 +93,12 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
+        android:maxLines="1"
         android:minWidth="0dp"
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
-        android:maxLines="1"
         android:text="+9"
         app:layout_constraintEnd_toStartOf="@+id/btDozePontos"
         app:layout_constraintStart_toEndOf="@+id/btSeisPontos"
@@ -195,12 +109,12 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:maxLines="1"
         android:minWidth="0dp"
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
-        android:maxLines="1"
         android:text="+12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btNovePontos"
@@ -210,52 +124,151 @@
         android:id="@+id/ic_jogadorDois"
         android:layout_width="51dp"
         android:layout_height="40dp"
-        app:srcCompat="@drawable/ic_jogadorum"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="168dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Logo jogador 2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btDozePontos"
+        app:srcCompat="@drawable/ic_jogadorum" />
 
     <TextView
         android:id="@+id/tvJogadorDois"
         android:layout_width="134dp"
         android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
         android:text="Jogador 2:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="168dp" />
+        app:layout_constraintStart_toEndOf="@+id/ic_jogadorDois"
+        app:layout_constraintTop_toBottomOf="@+id/btDozePontos" />
 
     <TextView
         android:id="@+id/tvPontosJogador2"
         android:layout_width="32dp"
         android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="168dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvJogadorDois"
+        app:layout_constraintStart_toEndOf="@+id/tvJogadorDois" />
+
+    <Button
+        android:id="@+id/btUmPonto2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:maxLines="1"
+        android:minWidth="0dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:text="+1"
+        app:layout_constraintEnd_toStartOf="@+id/btTresPontos2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
+
+    <Button
+        android:id="@+id/btTresPontos2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:maxLines="1"
+        android:minWidth="0dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:text="+3"
+        app:layout_constraintEnd_toStartOf="@+id/btSeisPontos2"
+        app:layout_constraintStart_toEndOf="@+id/btUmPonto2"
+        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
+
+    <Button
+        android:id="@+id/btSeisPontos2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:maxLines="1"
+        android:minWidth="0dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:text="+6"
+        app:layout_constraintEnd_toStartOf="@+id/btNovePontos2"
+        app:layout_constraintStart_toEndOf="@+id/btTresPontos2"
+        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
+
+    <Button
+        android:id="@+id/btNovePontos2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:maxLines="1"
+        android:minWidth="0dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:text="+9"
+        app:layout_constraintEnd_toStartOf="@+id/btDozePontos2"
+        app:layout_constraintStart_toEndOf="@+id/btSeisPontos2"
+        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
+
+    <Button
+        android:id="@+id/btDozePontos2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:maxLines="1"
+        android:minWidth="0dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:text="+12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btNovePontos2"
+        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
 
     <Button
         android:id="@+id/btJogadas"
-        android:layout_width="379dp"
+        android:layout_width="0dp"
         android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:text="Hist. de jogadas"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="351dp" />
-
-    <Button
-        android:id="@+id/btZerarHistorico"
-        android:layout_width="379dp"
-        android:layout_height="53dp"
-        android:text="inf. Nomes"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="501dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btDozePontos2" />
 
     <Button
         android:id="@+id/btZerarHistorico2"
-        android:layout_width="379dp"
+        android:layout_width="0dp"
         android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
         android:text="Zerar historico"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="423dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btJogadas" />
 
+    <Button
+        android:id="@+id/btZerarHistorico"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:text="inf. Nomes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btZerarHistorico2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
