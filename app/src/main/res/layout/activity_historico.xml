@@ -8,7 +8,7 @@
     tools:context=".HistoricoActivity">
 
     <ImageView
-        android:id="@+id/ic_jogadorUm"
+        android:id="@+id/icJogadorUm"
         android:layout_width="51dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -19,14 +19,14 @@
         app:srcCompat="@drawable/ic_jogadorum" />
 
     <TextView
-        android:id="@+id/tvjogador1"
+        android:id="@+id/tvLabelJogadorUm"
         android:layout_width="137dp"
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="20dp"
         android:text="Jogador 1:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toEndOf="@+id/ic_jogadorUm"
+        app:layout_constraintStart_toEndOf="@+id/icJogadorUm"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -36,30 +36,30 @@
         android:layout_marginStart="4dp"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvjogador1"
-        app:layout_constraintStart_toEndOf="@+id/tvjogador1" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelJogadorUm"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelJogadorUm" />
 
     <ImageView
-        android:id="@+id/ic_jogadorDois"
+        android:id="@+id/icJogadorDois"
         android:layout_width="51dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:contentDescription="Logo jogador 2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvjogador1"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelJogadorUm"
         app:srcCompat="@drawable/ic_jogadorum" />
 
     <TextView
-        android:id="@+id/tvJogador2"
+        android:id="@+id/tvLabelJogadorDois"
         android:layout_width="134dp"
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
         android:text="Jogador 2:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toEndOf="@+id/ic_jogadorDois"
-        app:layout_constraintTop_toBottomOf="@+id/tvjogador1" />
+        app:layout_constraintStart_toEndOf="@+id/icJogadorDois"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelJogadorUm" />
 
     <TextView
         android:id="@+id/tvPartidasJogadorDois"
@@ -69,7 +69,7 @@
         android:layout_marginTop="24dp"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvJogador2"
-        app:layout_constraintStart_toEndOf="@+id/tvJogador2" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelJogadorDois"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelJogadorDois" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

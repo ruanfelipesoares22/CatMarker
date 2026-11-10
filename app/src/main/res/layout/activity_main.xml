@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tvNomeJogadorUm"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/ic_jogadorUm"
+        android:id="@+id/icJogadorUm"
         android:layout_width="51dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -19,28 +19,28 @@
         app:srcCompat="@drawable/ic_jogadorum" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvLabelJogadorUm"
         android:layout_width="137dp"
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="20dp"
         android:text="Jogador 1:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toEndOf="@+id/ic_jogadorUm"
+        app:layout_constraintStart_toEndOf="@+id/icJogadorUm"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvPontosJogador1"
+        android:id="@+id/tvPontosJogadorUm"
         android:layout_width="32dp"
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/textView" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelJogadorUm"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelJogadorUm" />
 
     <Button
-        android:id="@+id/btUmPonto"
+        android:id="@+id/btJogadorUmMais1"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -51,13 +51,13 @@
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
         android:text="+1"
-        app:layout_constraintEnd_toStartOf="@+id/btTresPontos"
+        app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais3"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorUm" />
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
     <Button
-        android:id="@+id/btTresPontos"
+        android:id="@+id/btJogadorUmMais3"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
@@ -68,12 +68,12 @@
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
         android:text="+3"
-        app:layout_constraintEnd_toStartOf="@+id/btSeisPontos"
-        app:layout_constraintStart_toEndOf="@+id/btUmPonto"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorUm" />
+        app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais6"
+        app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais1"
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
     <Button
-        android:id="@+id/btSeisPontos"
+        android:id="@+id/btJogadorUmMais6"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
@@ -84,12 +84,12 @@
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
         android:text="+6"
-        app:layout_constraintEnd_toStartOf="@+id/btNovePontos"
-        app:layout_constraintStart_toEndOf="@+id/btTresPontos"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorUm" />
+        app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais9"
+        app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais3"
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
     <Button
-        android:id="@+id/btNovePontos"
+        android:id="@+id/btJogadorUmMais9"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
@@ -100,12 +100,12 @@
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
         android:text="+9"
-        app:layout_constraintEnd_toStartOf="@+id/btDozePontos"
-        app:layout_constraintStart_toEndOf="@+id/btSeisPontos"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorUm" />
+        app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais12"
+        app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais6"
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
     <Button
-        android:id="@+id/btDozePontos"
+        android:id="@+id/btJogadorUmMais12"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
@@ -117,22 +117,22 @@
         android:paddingEnd="2dp"
         android:text="+12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btNovePontos"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorUm" />
+        app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais9"
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
     <ImageView
-        android:id="@+id/ic_jogadorDois"
+        android:id="@+id/icJogadorDois"
         android:layout_width="51dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:contentDescription="Logo jogador 2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btDozePontos"
+        app:layout_constraintTop_toBottomOf="@+id/btJogadorUmMais12"
         app:srcCompat="@drawable/ic_jogadorum" />
 
     <TextView
-        android:id="@+id/tvJogadorDois"
+        android:id="@+id/tvLabelJogadorDois"
         android:layout_width="134dp"
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
@@ -140,22 +140,22 @@
         android:text="Jogador 2:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/ic_jogadorDois"
-        app:layout_constraintTop_toBottomOf="@+id/btDozePontos" />
+        app:layout_constraintStart_toEndOf="@+id/icJogadorDois"
+        app:layout_constraintTop_toBottomOf="@+id/btJogadorUmMais12" />
 
     <TextView
-        android:id="@+id/tvPontosJogador2"
+        android:id="@+id/tvPontosJogadorDois"
         android:layout_width="32dp"
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvJogadorDois"
-        app:layout_constraintStart_toEndOf="@+id/tvJogadorDois" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelJogadorDois"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelJogadorDois" />
 
     <Button
-        android:id="@+id/btUmPonto2"
+        android:id="@+id/btJogadorDoisMais1"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -166,13 +166,13 @@
         android:paddingStart="2dp"
         android:paddingEnd="2dp"
         android:text="+1"
-        app:layout_constraintEnd_toStartOf="@+id/btTresPontos2"
+        app:layout_constraintEnd_toStartOf="@+id/btJogadorDoisMais12"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
     <Button
-        android:id="@+id/btTresPontos2"
+        android:id="@+id/btJogadorDoisMais12"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
@@ -184,8 +184,8 @@
         android:paddingEnd="2dp"
         android:text="+3"
         app:layout_constraintEnd_toStartOf="@+id/btSeisPontos2"
-        app:layout_constraintStart_toEndOf="@+id/btUmPonto2"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
+        app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais1"
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
     <Button
         android:id="@+id/btSeisPontos2"
@@ -200,8 +200,8 @@
         android:paddingEnd="2dp"
         android:text="+6"
         app:layout_constraintEnd_toStartOf="@+id/btNovePontos2"
-        app:layout_constraintStart_toEndOf="@+id/btTresPontos2"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
+        app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais12"
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
     <Button
         android:id="@+id/btNovePontos2"
@@ -217,7 +217,7 @@
         android:text="+9"
         app:layout_constraintEnd_toStartOf="@+id/btDozePontos2"
         app:layout_constraintStart_toEndOf="@+id/btSeisPontos2"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
     <Button
         android:id="@+id/btDozePontos2"
@@ -233,7 +233,7 @@
         android:text="+12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btNovePontos2"
-        app:layout_constraintTop_toBottomOf="@+id/ic_jogadorDois" />
+        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
     <Button
         android:id="@+id/btJogadas"
@@ -248,7 +248,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btDozePontos2" />
 
     <Button
-        android:id="@+id/btZerarHistorico2"
+        android:id="@+id/btZerarHistorico"
         android:layout_width="0dp"
         android:layout_height="53dp"
         android:layout_marginStart="16dp"
@@ -269,6 +269,6 @@
         android:text="inf. Nomes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btZerarHistorico2"/>
+        app:layout_constraintTop_toBottomOf="@+id/btZerarHistorico"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
