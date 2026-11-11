@@ -129,14 +129,14 @@
         android:contentDescription="Logo jogador 2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btJogadorUmMais12"
-        app:srcCompat="@drawable/ic_jogadorum" />
+        app:srcCompat="@drawable/ic_jogadordois" />
 
     <TextView
         android:id="@+id/tvNomeJogadorDois"
-        android:layout_width="134dp"
-        android:layout_height="40dp"
+        android:layout_width="133dp"
+        android:layout_height="39dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="Jogador 2:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20sp"
@@ -148,7 +148,6 @@
         android:layout_width="32dp"
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvNomeJogadorDois"
