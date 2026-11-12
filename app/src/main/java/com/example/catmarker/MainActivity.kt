@@ -62,6 +62,10 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btHistoricoJogadas).setOnClickListener {
             val intent = Intent(this, HistoricoActivity::class.java)
+            intent.putExtra("nomeUm", nomeUm)
+            intent.putExtra("nomeDois", nomeDois)
+            intent.putExtra("vitoriasJogadorUm", vitoriasJogadorUM)
+            intent.putExtra("vitoriasJogadorDois", vitoriasJogadorDois)
             startActivity(intent)
         }
 
