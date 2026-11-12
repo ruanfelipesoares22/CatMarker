@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
     private var nomeUm: String = "Jogador 1"
     private var nomeDois: String = "Jogador 2"
 
+    private var vitoriasJogadorUM: Int = 0
+    private var vitoriasJogadorDois: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -84,6 +87,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun verificarVencedor(nomeJogador: String, pontos: Int) {
         if (pontos>=12) {
+            if (nomeJogador == nomeUm) {
+                vitoriasJogadorUM++
+            }else{
+                vitoriasJogadorDois++
+            }
             AlertDialog.Builder(this)
                 .setTitle("Vencedor!")
                 .setMessage("$nomeJogador venceu!")
