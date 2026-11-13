@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -58,6 +59,11 @@ class MainActivity : AppCompatActivity() {
             pontosJogadorDois = 0
             tvPontosJogadorUm.text = pontosJogadorUm.toString()
             tvPontosJogadorDois.text = pontosJogadorDois.toString()
+
+            vitoriasJogadorUM = 0
+            vitoriasJogadorDois = 0
+
+            Toast.makeText(this, "Placar e historico zerados !", Toast.LENGTH_SHORT).show()
         }
 
         findViewById<Button>(R.id.btHistoricoJogadas).setOnClickListener {
@@ -103,9 +109,6 @@ class MainActivity : AppCompatActivity() {
                     reiniciaPlacar()
                     dialog.dismiss()
                 }
-
-                .setNegativeButton("Cancelar", null)
-                .setCancelable(false)
                 .show()
             }
     }
@@ -115,6 +118,7 @@ class MainActivity : AppCompatActivity() {
         pontosJogadorDois = 0
         tvPontosJogadorUm.text = pontosJogadorUm.toString()
         tvPontosJogadorDois.text = pontosJogadorDois.toString()
+
     }
     fun btInformarNomesOnClick(view: View) {
         val intent = Intent(this, NomesActivity::class.java)

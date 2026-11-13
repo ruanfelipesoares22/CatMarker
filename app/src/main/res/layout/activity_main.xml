@@ -1,274 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/icJogadorUm"
-        android:layout_width="51dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="Logo jogador 1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_jogadorum" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
 
-    <TextView
-        android:id="@+id/tvNomeJogadorUm"
-        android:layout_width="137dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="20dp"
-        android:text="Jogador 1:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toEndOf="@+id/icJogadorUm"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/icJogadorUm"
+            android:layout_width="51dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Logo jogador 1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_jogadorum" />
 
-    <TextView
-        android:id="@+id/tvPontosJogadorUm"
-        android:layout_width="32dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="4dp"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvNomeJogadorUm"
-        app:layout_constraintStart_toEndOf="@+id/tvNomeJogadorUm" />
+        <TextView
+            android:id="@+id/tvNomeJogadorUm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:text="Jogador 1:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toEndOf="@+id/icJogadorUm"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btJogadorUmMais1"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+1"
-        app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais3"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
+        <TextView
+            android:id="@+id/tvPontosJogadorUm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvNomeJogadorUm"
+            app:layout_constraintStart_toEndOf="@+id/tvNomeJogadorUm" />
 
-    <Button
-        android:id="@+id/btJogadorUmMais3"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+3"
-        app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais6"
-        app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais1"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
+        <Button
+            android:id="@+id/btJogadorUmMais1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+1"
+            app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
-    <Button
-        android:id="@+id/btJogadorUmMais6"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+6"
-        app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais9"
-        app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais3"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
+        <Button
+            android:id="@+id/btJogadorUmMais3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+3"
+            app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais6"
+            app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais1"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
-    <Button
-        android:id="@+id/btJogadorUmMais9"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+9"
-        app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais12"
-        app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais6"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
+        <Button
+            android:id="@+id/btJogadorUmMais6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+6"
+            app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais9"
+            app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais3"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
-    <Button
-        android:id="@+id/btJogadorUmMais12"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais9"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
+        <Button
+            android:id="@+id/btJogadorUmMais9"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+9"
+            app:layout_constraintEnd_toStartOf="@+id/btJogadorUmMais12"
+            app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais6"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
-    <ImageView
-        android:id="@+id/icJogadorDois"
-        android:layout_width="51dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="Logo jogador 2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btJogadorUmMais12"
-        app:srcCompat="@drawable/ic_jogadordois" />
+        <Button
+            android:id="@+id/btJogadorUmMais12"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btJogadorUmMais9"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorUm" />
 
-    <TextView
-        android:id="@+id/tvNomeJogadorDois"
-        android:layout_width="133dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="20dp"
-        android:text="Jogador 2:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/icJogadorDois"
-        app:layout_constraintTop_toBottomOf="@+id/btJogadorUmMais12" />
+        <ImageView
+            android:id="@+id/icJogadorDois"
+            android:layout_width="51dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="Logo jogador 2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btJogadorUmMais12"
+            app:srcCompat="@drawable/ic_jogadordois" />
 
-    <TextView
-        android:id="@+id/tvPontosJogadorDois"
-        android:layout_width="32dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="4dp"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvNomeJogadorDois"
-        app:layout_constraintStart_toEndOf="@+id/tvNomeJogadorDois" />
+        <TextView
+            android:id="@+id/tvNomeJogadorDois"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:text="Jogador 2:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/icJogadorDois"
+            app:layout_constraintTop_toBottomOf="@+id/btJogadorUmMais12" />
 
-    <Button
-        android:id="@+id/btJogadorDoisMais1"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+1"
-        app:layout_constraintEnd_toStartOf="@+id/btJogadorDoisMais3"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
+        <TextView
+            android:id="@+id/tvPontosJogadorDois"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvNomeJogadorDois"
+            app:layout_constraintStart_toEndOf="@+id/tvNomeJogadorDois" />
 
-    <Button
-        android:id="@+id/btJogadorDoisMais3"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+3"
-        app:layout_constraintEnd_toStartOf="@+id/btJogadorDoisMais6"
-        app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais1"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
+        <Button
+            android:id="@+id/btJogadorDoisMais1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+1"
+            app:layout_constraintEnd_toStartOf="@+id/btJogadorDoisMais3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
-    <Button
-        android:id="@+id/btJogadorDoisMais6"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+6"
-        app:layout_constraintEnd_toStartOf="@+id/btJogadorDoisMais9"
-        app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais3"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
+        <Button
+            android:id="@+id/btJogadorDoisMais3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+3"
+            app:layout_constraintEnd_toStartOf="@+id/btJogadorDoisMais6"
+            app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais1"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
-    <Button
-        android:id="@+id/btJogadorDoisMais9"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+9"
-        app:layout_constraintEnd_toStartOf="@+id/btJogadorDoisMais12"
-        app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais6"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
+        <Button
+            android:id="@+id/btJogadorDoisMais6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+6"
+            app:layout_constraintEnd_toStartOf="@+id/btJogadorDoisMais9"
+            app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais3"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
-    <Button
-        android:id="@+id/btJogadorDoisMais12"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:maxLines="1"
-        android:minWidth="0dp"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="+12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais9"
-        app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
+        <Button
+            android:id="@+id/btJogadorDoisMais9"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+9"
+            app:layout_constraintEnd_toStartOf="@+id/btJogadorDoisMais12"
+            app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais6"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
-    <Button
-        android:id="@+id/btHistoricoJogadas"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:text="Hist. de jogadas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btJogadorDoisMais12" />
+        <Button
+            android:id="@+id/btJogadorDoisMais12"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="+12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btJogadorDoisMais9"
+            app:layout_constraintTop_toBottomOf="@+id/icJogadorDois" />
 
-    <Button
-        android:id="@+id/btZerarHistorico"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:text="Zerar historico"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btHistoricoJogadas" />
+        <Button
+            android:id="@+id/btHistoricoJogadas"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="Hist. de jogadas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btJogadorDoisMais12" />
 
-    <Button
-        android:id="@+id/btInformarNomes"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:text="inf. Nomes"
-        android:onClick="btInformarNomesOnClick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btZerarHistorico"/>
+        <Button
+            android:id="@+id/btZerarHistorico"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="Zerar historico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btHistoricoJogadas" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btInformarNomes"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="btInformarNomesOnClick"
+            android:text="inf. Nomes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btZerarHistorico" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

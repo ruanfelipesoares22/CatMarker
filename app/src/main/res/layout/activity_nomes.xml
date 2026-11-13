@@ -7,21 +7,50 @@
     android:layout_height="match_parent"
     tools:context=".NomesActivity">
 
+    <Button
+        android:id="@+id/btConfirmarNomes"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="btConfirmarNomesOnClick"
+        android:text="Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeJogadorDois" />
+
     <ImageView
-        android:id="@+id/icJogadorUm"
+        android:id="@+id/icJogadorDois"
         android:layout_width="51dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="Logo jogador 1"
+        android:layout_marginTop="28dp"
+        android:contentDescription="Logo jogador 2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_jogadorum" />
+        app:layout_constraintTop_toBottomOf="@+id/etNomeJogadorUm"
+        app:srcCompat="@drawable/ic_jogadordois" />
+
+    <EditText
+        android:id="@+id/etNomeJogadorUm"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Nome Jogador 1"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvNomeJogadorUm"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvNomeJogadorUm"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="Jogador 1:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -29,65 +58,39 @@
         app:layout_constraintStart_toEndOf="@+id/icJogadorUm" />
 
     <EditText
-        android:id="@+id/etNomeJogadorUm"
+        android:id="@+id/etNomeJogadorDois"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Nome Jogador 1"
+        android:hint="Nome Jogador 2"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvNomeJogadorUm"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvNomeJogadorDois"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeJogadorUm" />
 
     <ImageView
-        android:id="@+id/icJogadorDois"
+        android:id="@+id/icJogadorUm"
         android:layout_width="51dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="Logo jogador 2"
+        android:layout_marginTop="48dp"
+        android:contentDescription="Logo jogador 1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNomeJogadorUm"
-        app:srcCompat="@drawable/ic_jogadordois" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_jogadorum" />
 
     <TextView
         android:id="@+id/tvNomeJogadorDois"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="Jogador 2:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBaseline_toBaselineOf="@+id/etNomeJogadorDois"
         app:layout_constraintStart_toEndOf="@+id/icJogadorDois" />
-
-    <EditText
-        android:id="@+id/etNomeJogadorDois"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Nome Jogador 2"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvNomeJogadorDois"
-        app:layout_constraintTop_toBottomOf="@+id/etNomeJogadorUm" />
-
-    <Button
-        android:id="@+id/btConfirmarNomes"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:text="Confirmar"
-        android:onClick="btConfirmarNomesOnClick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNomeJogadorDois" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
